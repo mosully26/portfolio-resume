@@ -81,6 +81,8 @@ body {
 .section {
   margin-top: 16px;
 
+  padding-bottom: 16px;
+
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -125,6 +127,24 @@ body {
 }
 
 .skills-grid span {
+
+  transition: transform 0.2s ease;
+
+}
+
+.skills-grid span:hover {
+
+  transform: scale(1.05);
+
+}
+
+.skills-grid span i {
+
+  margin-right: 6px;
+
+}
+
+.skills-grid span \{
 
   transition: transform 0.2s ease;
 
@@ -226,6 +246,8 @@ body {
 .section {
   margin-top: 16px;
 
+  padding-bottom: 16px;
+
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -281,6 +303,24 @@ body {
 
 }
 
+.skills-grid span i {
+
+  margin-right: 6px;
+
+}
+
+.skills-grid span \{
+
+  transition: transform 0.2s ease;
+
+}
+
+.skills-grid span:hover {
+
+  transform: scale(1.05);
+
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -288,6 +328,24 @@ body {
 }
 
 .skills-grid span {
+
+  transition: transform 0.2s ease;
+
+}
+
+.skills-grid span:hover {
+
+  transform: scale(1.05);
+
+}
+
+.skills-grid span i {
+
+  margin-right: 6px;
+
+}
+
+.skills-grid span \{
   padding: 10px 14px;
   background: #eff6ff;
   color: #1e40af;
