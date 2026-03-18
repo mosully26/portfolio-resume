@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohanad Suleiman | Resume</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="resume">
+      <header class="hero">
+        <div class="hero-text">
+          <h1>Mohanad Suleiman</h1>
+          <p class="tagline">
+            Computer Information Technology Graduate
+          </p>
+          <p class="summary">
+            <p class="summary">
+                Recent Computer Information Technology graduate 
+                with experience in IT support, full-stack development, 
+                and ecommerce operations. Skilled in troubleshooting systems,
+                supporting users, and building practical technology solutions 
+                that improve efficiency and performance.
+            </p>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <p><i class="fa-solid fa-envelope"></i> mnsully26@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> (219) 801-4628</p>
+          <p><i class="fa-solid fa-location-dot"></i> Schererville, Indiana</p>
+          <p><i class="fa-brands fa-linkedin"></i> linkedIn.com/in/mohanad-suleiman-48583b187</p>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Svelte</span>
+          <span>Node.js</span>
+          <span>AWS</span>
+          <span>SQL / Databases</span>
+          <span>IT Support</span>
+          <span>Windows / macOS</span>
+          <span>Networking Basics</span>
+          <span>Ecommerce Operations</span>
+          <span>Digital Marketing</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experience</h2>
+
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3>Ecommerce & Digital Operations Specialist</h3>
+              <p class="company">Three Brothers Inc • South Bend, IN</p>
+            </div>
+            <span class="date">Oct 2025 – Present</span>
+          </div>
+          <ul>
+            <li>
+              Built and managed an ecommerce platform that supported online
+              sales and the company’s digital growth
+            </li>
+            <li>
+              Managed product listings, pricing, metadata, and SEO to improve
+              product visibility and conversions
+            </li>
+            <li>
+              Created marketing content and ran social media campaigns to
+              increase engagement and brand awareness
+            </li>
+            <li>
+              Handled order fulfillment, logistics, and product operations
+              across digital sales channels
+            </li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3>Software Engineering Intern</h3>
+              <p class="company">American Identity Group • South Amboy, NJ</p>
+            </div>
+            <span class="date">Jan 2025 – Jul 2025</span>
+          </div>
+          <ul>
+            <li>
+              Built a full-stack order processing system using Svelte, Node.js,
+              and AWS to improve workflow efficiency and data handling
+            </li>
+            <li>
+              Designed and integrated database functionality for customer and
+              order data management
+            </li>
+            <li>
+              Added email and payment validation features to improve accuracy
+              and transaction reliability
+            </li>
+            <li>
+              Automated nightly data updates and maintenance tasks using cron
+              jobs
+            </li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3>Customer Support Associate</h3>
+              <p class="company">Three Brothers Inc • South Bend, IN</p>
+            </div>
+            <span class="date">Oct 2025 – Jan 2026</span>
+          </div>
+          <ul>
+            <li>
+              Supported daily operations in a fast-paced retail environment
+              while maintaining service quality
+            </li>
+            <li>
+              Resolved customer concerns using strong communication,
+              problem-solving, and conflict resolution skills
+            </li>
+            <li>
+              Built positive customer relationships and contributed to customer
+              retention
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3>Bachelor of Science in Computer Information Technology</h3>
+              <p class="company">Purdue University Northwest</p>
+            </div>
+            <span class="date">2020 – 2025</span>
+          </div>
+        </article>
+      </section>
+
+      <div class="actions">
+        <button id="downloadPdfBtn">Download PDF</button>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      async function downloadPDF() {
+        const actions = document.querySelector('.actions');
+        const resume = document.querySelector('.resume');
+        const pdfFile = 'Resume-Mohanad.docx.pdf';
+
+        // Try opening the user-provided PDF first
+        try {
+          // Open in a new tab so the browser will display or download it
+          const win = window.open(pdfFile, '_blank');
+          // If popup blocked or failed, fallback to creating an anchor
+          if (!win) {
+            const a = document.createElement('a');
+            a.href = pdfFile;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.download = pdfFile;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+          }
+          return;
+        } catch (e) {
+          console.warn('Could not open provided PDF, falling back to HTML generation', e);
+        }
+
+        // Fallback: generate PDF from page (keeps previous behavior)
+        const oldDisplay = actions.style.display;
+        try {
+          actions.style.display = 'none';
+          const opt = {
+            margin: 0.4,
+            filename: 'Mohanad_Suleiman_Resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+          await html2pdf().set(opt).from(resume).save();
+        } catch (err) {
+          console.error('PDF generation failed, falling back to print()', err);
+          window.print();
+        } finally {
+          actions.style.display = oldDisplay;
+        }
+      }
+
+      document.getElementById('downloadPdfBtn').addEventListener('click', downloadPDF);
+    </script>
+  </body>
+</html>
