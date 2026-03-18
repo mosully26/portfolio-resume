@@ -28,13 +28,11 @@
             Computer Information Technology Graduate
           </p>
           <p class="summary">
-            <p class="summary">
-                Recent Computer Information Technology graduate 
-                with experience in IT support, full-stack development, 
-                and ecommerce operations. Skilled in troubleshooting systems,
-                supporting users, and building practical technology solutions 
-                that improve efficiency and performance.
-            </p>
+            Recent Computer Information Technology graduate 
+            with experience in IT support, full-stack development, 
+            and ecommerce operations. Skilled in troubleshooting systems,
+            supporting users, and building practical technology solutions 
+            that improve efficiency and performance.
           </p>
         </div>
 
@@ -47,7 +45,7 @@
       </header>
 
       <section class="section">
-        <h2>Skills</h2>
+        <h2><i class="fa-solid fa-tools"></i> Skills</h2>
         <div class="skills-grid">
           <span><i class="fa-brands fa-html5"></i> HTML</span>
           <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
@@ -65,7 +63,7 @@
       </section>
 
       <section class="section">
-        <h2>Experience</h2>
+        <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
 
         <article class="job">
           <div class="job-header">
@@ -149,7 +147,25 @@
       </section>
 
       <section class="section">
-        <h2>Education</h2>
+        <h2><i class="fa-solid fa-code"></i> Projects</h2>
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3>Ecommerce Platform</h3>
+              <p class="company">Personal Project</p>
+            </div>
+            <span class="date">2024</span>
+          </div>
+          <ul>
+            <li>Built a full-stack ecommerce site using Svelte, Node.js, and AWS</li>
+            <li>Implemented order processing and database management</li>
+            <li>Integrated payment and email validation features</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
         <article class="job">
           <div class="job-header">
             <div>
@@ -160,8 +176,6 @@
           </div>
         </article>
       </section>
-
-      <div class="actions">
         <button id="downloadPdfBtn">Download PDF</button>
       </div>
     </main>
@@ -172,9 +186,7 @@
         const resume = document.querySelector('.resume');
         const pdfFile = 'Resume-Mohanad.docx.pdf';
 
-        // Try opening the user-provided PDF first
         try {
-          // Open in a new tab so the browser will display or download it
           const win = window.open(pdfFile, '_blank');
           // If popup blocked or failed, fallback to creating an anchor
           if (!win) {
