@@ -204,6 +204,10 @@ body {
   font-weight: 500;
 }
 
+.skills-grid span i {
+  margin-right: 8px;
+}
+
 .job {
   margin-bottom: 26px;
 }
