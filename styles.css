@@ -149,7 +149,7 @@ body {
 .techStack {
   margin: 4px 0 0;
   color: #6b7280;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .date {
@@ -163,14 +163,16 @@ body {
 }
 
 .job ul {
+  font-size: 14px;
   margin: 0;
   padding-left: 18px;
   color: #374151;
 }
 
 .job li {
+  font-size: 14px;
   margin-bottom: 10px;
-  line-height: 1.65;
+  line-height: 1.25;
 }
 
 .actions {
