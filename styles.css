@@ -194,6 +194,16 @@ button:hover {
   background: #1e40af;
 }
 
+.links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .resume {
     padding: 28px 22px;
