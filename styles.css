@@ -121,6 +121,7 @@ body {
 
 .skills-grid span i {
   margin-right: 8px;
+  color: inherit;
 }
 
 .job {
@@ -204,6 +205,9 @@ button:hover {
 
 .links a:hover {
   text-decoration: underline;
+}
+.devicon-svelte-plain.colored {
+  color: inherit !important;
 }
 
 @media (max-width: 768px) {
